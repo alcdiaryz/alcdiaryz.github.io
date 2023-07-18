@@ -1,790 +1,1051 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>술렁술렁 개인정보처리방침</title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	padding-inline-start: 0;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.page-description {
-    margin-bottom: 2em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(55, 53, 47, 1);
-}
-.highlight-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.highlight-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.highlight-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.highlight-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.highlight-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.highlight-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.highlight-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.highlight-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.highlight-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.highlight-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.highlight-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.highlight-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.highlight-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.block-color-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.block-color-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.block-color-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.block-color-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.block-color-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.block-color-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.block-color-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.block-color-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.block-color-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.block-color-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.block-color-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.block-color-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
-.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
-.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
-.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
-.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
-.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
-.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
-.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
-.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
-.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
-.select-value-color-pageGlass { background-color: undefined; }
-.select-value-color-washGlass { background-color: undefined; }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="6589a69f-ecf0-48eb-985c-7a94a646a3f2" class="page sans"><header><h1 class="page-title">술렁술렁 개인정보처리방침</h1><p class="page-description"></p></header><div class="page-body"><p id="1b6cb166-8bdf-48cd-aa72-0a9244d37ed6" class="">
-</p><p id="73aa1908-9313-4ef3-ad3c-46ae20446ee5" class=""><em>&lt; 술렁술렁 &gt;(&#x27;https://alc-diary.shop/&#x27;이하 &#x27;술렁술렁&#x27;)</em>은(는) 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
-</p><p id="837faa75-bd65-4742-bb2f-4a3b0ccd7ab4" class="">○ 이 개인정보처리방침은 <em>2023</em>년 <em>1</em>월 <em>1</em>부터 적용됩니다.</p><p id="a69cf3a8-4d29-4fe0-9638-49f4a44afdc6" class=""><strong>제1조(개인정보의 처리 목적)</strong><em><strong>&lt; 술렁술렁 &gt;(&#x27;https://alcdiaryz.github.io/service&#x27;이하 &#x27;술렁술렁&#x27;)</strong></em><strong>은(는) 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
-</strong></p><p id="3d3e384e-18aa-4bfc-b977-584936a4c0b0" class="">1. 홈페이지 회원가입 및 관리</p><p id="f1c5444e-87c1-4964-87e4-73a4267d7314" class="">회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별·인증, 회원자격 유지·관리, 서비스 부정이용 방지, 각종 고지·통지, 고충처리 목적으로 개인정보를 처리합니다.</p><p id="bfbeb6b9-6344-453f-bc00-31d59aea521e" class="">2. 민원사무 처리</p><p id="6df7baa5-d9c4-4fab-8125-8c33adf2ade0" class="">민원인의 신원 확인, 민원사항 확인, 처리결과 통보 목적으로 개인정보를 처리합니다.</p><p id="bcb717be-1bd2-4a6b-82a8-9b4b09c2aab9" class="">3. 재화 또는 서비스 제공</p><p id="7fcf3fe4-b49e-4786-8cf9-26d60506cb55" class="">서비스 제공, 콘텐츠 제공, 맞춤서비스 제공, 본인인증을 목적으로 개인정보를 처리합니다.</p><p id="3bef9cf8-2112-4a5b-ae65-67375a1a5bfd" class="">4. 마케팅 및 광고에의 활용</p><p id="c176f267-720b-46a4-98b1-ffc2f2733a99" class="">신규 서비스(제품) 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공 및 참여기회 제공 , 인구통계학적 특성에 따른 서비스 제공 및 광고 게재 , 서비스의 유효성 확인 등을 목적으로 개인정보를 처리합니다.</p><p id="69d130bc-dd5e-4463-9f77-2b758e57924f" class="">5. 개인영상정보</p><p id="79848123-586e-4be2-89e1-a60bcceff9f9" class="">범죄의 예방 및 수사 등을 목적으로 개인정보를 처리합니다.
-
-</p><p id="7985102d-7543-4d49-a225-6381b478ea94" class=""><strong>제2조(개인정보의 처리 및 보유 기간)</strong></p><p id="326f8db9-390a-4cda-bed9-de8390d30d70" class="">① <em>&lt; 술렁술렁 &gt;</em>은(는) 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p><p id="31b6de8f-ec36-47d5-9e9b-9e6a895b5dce" class="">② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.</p><ul id="c10b633a-a34e-4789-b758-c46d38bd25b1" class="bulleted-list"><li style="list-style-type:disc">1.&lt;홈페이지 회원가입 및 관리&gt;</li></ul><ul id="978654a4-568c-4aae-af93-81e67b5aaeac" class="bulleted-list"><li style="list-style-type:disc">&lt;홈페이지 회원가입 및 관리&gt;와 관련한 개인정보는 수집.이용에 관한 동의일로부터&lt;1년&gt;까지 위 이용목적을 위하여 보유.이용됩니다.</li></ul><ul id="9a2ea5a6-760a-4dd9-98df-7411439ae9ab" class="bulleted-list"><li style="list-style-type:disc">보유근거 : 「개인정보보호법」 제15조(개인정보의 수집·이용) 제1항</li></ul><ul id="ca205c43-9b91-4f4d-8612-22d900d9bd5e" class="bulleted-list"><li style="list-style-type:disc">관련법령 : 신용정보의 수집/처리 및 이용 등에 관한 기록 : 3년</li></ul><ul id="e257f944-b01c-481b-bd0e-c6975416ce9b" class="bulleted-list"><li style="list-style-type:disc">예외사유 : 서비스 종료 시
-
-</li></ul><p id="a4125945-3e4d-4124-a276-ff219c6f61eb" class=""><strong>제3조(처리하는 개인정보의 항목)</strong></p><p id="98ffcca5-0b65-40df-bb16-73b3b8d91a28" class="">① <em>&lt; 술렁술렁 &gt;</em>은(는) 다음의 개인정보 항목을 처리하고 있습니다.</p><ul id="326a3b22-38de-4ea4-80f0-49697b287e7e" class="bulleted-list"><li style="list-style-type:disc">1&lt; 홈페이지 회원가입 및 관리 &gt;</li></ul><ul id="5b1001f4-c8f9-4820-af4f-f15127266c4f" class="bulleted-list"><li style="list-style-type:disc">필수항목 : 로그인ID, 접속 IP 정보, 쿠키, 접속 로그, 서비스 이용 기록</li></ul><ul id="3aabc985-0536-456f-a49e-ca13a82cfbc5" class="bulleted-list"><li style="list-style-type:disc">선택항목 : 성별, 이메일
-</li></ul><p id="fba2028e-71b4-48c4-90f4-9c2385c0b7b5" class=""><em>
-</em></p><p id="73a0d493-84f2-492b-b591-d37034a3396f" class=""><strong>제4조(개인정보의 제3자 제공에 관한 사항)</strong></p><p id="f4e94249-f73d-4f25-ad11-284938abc48e" class="">① <em>&lt; 술렁술렁 &gt;</em>은(는) 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</p><p id="bc6d2062-c023-44ee-ac72-28a6cefde5ac" class=""><em>② &lt; 술렁술렁 &gt;</em>은(는) 다음과 같이 개인정보를 제3자에게 제공하고 있습니다.</p><ul id="a4e6ea8c-26f2-4cc2-8bbb-3bab7735fb69" class="bulleted-list"><li style="list-style-type:disc">개인정보를 제공받는 자 :</li></ul><ul id="f3272191-07dd-4705-bad4-6e438774597c" class="bulleted-list"><li style="list-style-type:disc">제공받는 자의 개인정보 이용목적 :</li></ul><ul id="c7f462ec-2b30-4d87-8f67-81e7c6902f25" class="bulleted-list"><li style="list-style-type:disc">제공받는 자의 보유.이용기간:</li></ul><p id="cf16d296-4831-4942-ab21-c7736cd3dce8" class="">
-</p><p id="f6a32d25-6d53-4eb4-bbe6-3a7a7fe6f4ec" class="">
-</p><p id="f29d8066-484e-48f8-8b05-bc9294f5d6dd" class="">
-</p><p id="5bb7f4d8-912b-4dab-87f8-03ef44bebe25" class=""><strong>제5조(개인정보처리의 위탁에 관한 사항)</strong><em>
-
-① &lt; 술렁술렁 &gt;</em>은(는) 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.
-• 1. &lt; &gt;
-• 위탁받는 자 (수탁자) :
-• 위탁하는 업무의 내용 :
-• 위탁기간 :<em>
-② &lt; 술렁술렁 &gt;</em>은(는) 위탁계약 체결시 「개인정보 보호법」 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적․관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리․감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.<em>
-③ </em>위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.</p><p id="3cc324fd-ba6f-449a-8c98-102e39874510" class="">
-</p><p id="c765e1fa-0f75-4819-9278-476aa0887b0d" class="">
-</p><p id="5a460487-f09f-4a71-8e95-709dfb9b6788" class=""><strong>제6조(개인정보의 파기절차 및 파기방법)</strong><em>
-① &lt; 술렁술렁 &gt; </em>은(는) 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.② 정보주체로부터 동의받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.1. 법령 근거 :2. 보존하는 개인정보 항목 : 계좌정보, 거래날짜③ 개인정보 파기의 절차 및 방법은 다음과 같습니다.1. 파기절차&lt; 술렁술렁 &gt; 은(는) 파기 사유가 발생한 개인정보를 선정하고, &lt; 술렁술렁 &gt; 의 개인정보 보호책임자의 승인을 받아 개인정보를 파기합니다.
-
-2. 파기방법
-종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.전자적 파일 형태의 정보는 기록을 재생할 수 없는 기술적 방법을 사용합니다</p><p id="eef65aee-7064-440e-b336-562781f12bd5" class="">
-</p><p id="e2647089-0890-4d0b-8ced-63bb2188bf13" class="">
-</p><p id="8694c298-ede8-430d-9a0e-1c760c8e4d3e" class="">
-</p><p id="c17dcd8a-ac36-44da-b1b3-161946421db7" class=""><strong>제7조(정보주체와 법정대리인의 권리·의무 및 그 행사방법에 관한 사항)</strong>
-① 정보주체는 술렁술렁에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다.
-② 제1항에 따른 권리 행사는술렁술렁에 대해 「개인정보 보호법」 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 술렁술렁은(는) 이에 대해 지체 없이 조치하겠습니다.
-③ 제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다.이 경우 “개인정보 처리 방법에 관한 고시(제2020-7호)” 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.
-④ 개인정보 열람 및 처리정지 요구는 「개인정보 보호법」 제35조 제4항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.
-⑤ 개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.
-⑥ 술렁술렁은(는) 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</p><p id="f3026b9c-3ae8-4320-bfe1-d8b4b58bec60" class="">
-</p><p id="4d275801-9395-4d32-baca-6ad9f6fd17fd" class="">
-</p><p id="a7de7284-1a0e-42e6-80a7-adce55de068d" class=""><strong>제8조(개인정보의 안전성 확보조치에 관한 사항) </strong><em><strong>&lt; 술렁술렁 &gt;</strong></em><strong>은(는) 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</strong>
-1. 개인정보 취급 직원의 최소화 및 교육
-개인정보를 취급하는 직원을 지정하고 담당자에 한정시켜 최소화 하여 개인정보를 관리하는 대책을 시행하고 있습니다.
-</p><p id="7dac4c7c-6949-4343-bcc1-515b1d6a41d8" class="">
-</p><p id="82497ed0-66cf-449b-b0ea-a03892ae5d55" class="">
-</p><p id="86b07610-7599-4f34-bb69-b837906dc58b" class=""><strong>제9조(개인정보를 자동으로 수집하는 장치의 설치·운영 및 그 거부에 관한 사항)</strong>
-술렁술렁 은(는) 정보주체의 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용하지 않습니다.
-<em>
-
-</em><strong>제10조(행태정보의 수집·이용·제공 및 거부 등에 관한 사항)</strong>
-행태정보의 수집·이용·제공 및 거부등에 관한 사항
-&lt;개인정보처리자명&gt;은(는) 온라인 맞춤형 광고 등을 위한 행태정보를 수집·이용·제공하지 않습니다.</p><p id="8b872eec-6a45-4baa-8e4d-a820db3e6f6f" class="">
-</p><p id="163e6e01-9885-4d7a-96d1-37a521efa5ca" class="">
-</p><p id="1cef2627-1e5a-44b7-bcd8-2356a34893d1" class="">
-<strong>제11조(추가적인 이용·제공 판단기준)</strong></p><p id="c3c90e0b-fa9f-4469-8ee5-6faf2ee50a6a" class=""><em>&lt; 술렁술렁 &gt;</em> 은(는) ｢개인정보 보호법｣ 제15조제3항 및 제17조제4항에 따라 ｢개인정보 보호법 시행령｣ 제14조의2에 따른 사항을 고려하여 정보주체의 동의 없이 개인정보를 추가적으로 이용·제공할 수 있습니다. 이에 따라 &lt; 술렁술렁 &gt; 가(이) 정보주체의 동의 없이 추가적인 이용·제공을 하기 위해서 다음과 같은 사항을 고려하였습니다.▶ 개인정보를 추가적으로 이용·제공하려는 목적이 당초 수집 목적과 관련성이 있는지 여부
-
-
-▶ 개인정보를 수집한 정황 또는 처리 관행에 비추어 볼 때 추가적인 이용·제공에 대한 예측 가능성이 있는지 여부
-▶ 개인정보의 추가적인 이용·제공이 정보주체의 이익을 부당하게 침해하는지 여부
-▶ 가명처리 또는 암호화 등 안전성 확보에 필요한 조치를 하였는지 여부<em>
-
-※ 추가적인 이용·제공 시 고려사항에 대한 판단기준은 사업자/단체 스스로 자율적으로 판단하여 작성·공개함</em></p><p id="ef7acef9-5a19-4e3b-93f7-e9ef5a65fead" class="">
-</p><p id="49751714-eeb1-45be-9bd4-874ba208d663" class="">
-</p><p id="42505ef4-4a61-4a97-a67a-f317fde020f5" class="">
-</p><p id="fae9eb56-4afa-4741-8125-82846639a4b4" class="">
-</p><p id="9e0cb362-5b35-4cdd-82fb-7398efa1b35d" class=""><strong>제12조(가명정보를 처리하는 경우 가명정보 처리에 관한 사항)</strong></p><p id="7320bf66-77fa-4135-b762-f8bca77da943" class=""><em>&lt; 술렁술렁 &gt; </em>은(는) 다음과 같은 목적으로 가명정보를 처리하고 있습니다.<em>
-
-</em>▶ 가명정보의 처리 목적
-- 직접작성 가능합니다.
-
-▶ 가명정보의 처리 및 보유기간
-- 직접작성 가능합니다.
-
-▶ 가명정보의 제3자 제공에 관한 사항(해당되는 경우에만 작성)
-- 직접작성 가능합니다.
-
-▶ 가명정보 처리의 위탁에 관한 사항(해당되는 경우에만 작성)
-- 직접작성 가능합니다.
-
-▶ 가명처리하는 개인정보의 항목
-- 직접작성 가능합니다.
-
-▶ 법 제28조의4(가명정보에 대한 안전조치 의무 등)에 따른 가명정보의 안전성 확보조치에 관한 사항
-- 직접작성 가능합니다.</p><p id="c7168186-894e-4430-832b-98e30e8c582b" class="">
-</p><p id="60959aa0-8d8a-4c09-809f-cd404bf716f3" class="">
-</p><p id="d18f0d40-14aa-40bf-90f4-fb1f4684737c" class=""><strong>제13조 (개인정보 보호책임자에 관한 사항)</strong><em>
-</em>① 술렁술렁 은(는) 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
-▶ 개인정보 보호책임자
-• 성명 :최다예
-• 직책 :PM
-• 직급 :팀원
-• 연락처 :010-2802-3287, soar_dy@naver.com,
-※ 개인정보 보호 담당부서로 연결됩니다.<em>
-
-② 정보주체께서는 술렁술렁 의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 술렁술렁 은(는) 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.</em></p><p id="2f3fd0f2-fe66-49e2-9842-91dd71c17acc" class="">
-</p><p id="9bccc0a4-fbcd-4469-b67c-a7ac1ce78113" class="">
-</p><p id="7ee844c7-01f1-49bc-8995-2981b2da37e1" class="">
-</p><p id="44f36117-5ad7-4477-8d28-b93ca59ec584" class="">
-</p><p id="72f9442d-3c22-4390-a4a0-f2bcaf1e5ce2" class=""><strong>제14조(국내대리인의 지정)</strong></p><p id="750ad587-0c5f-439b-a9fb-814570c13fe1" class="">정보주체는 ｢개인정보 보호법｣ 제39조의11에 따라 지정된 &lt; 술렁술렁 &gt;의 국내대리인에게 개인정보 관련 고충처리 등의 업무를 위하여 연락을 취할 수 있습니다. &lt; 술렁술렁 &gt;은(는) 정보주체의 개인정보 관련 고충처리 등 개인정보 보호책임자의 업무 등을 신속하게 처리할 수 있도록 노력하겠습니다.▶ &lt; 술렁술렁 &gt; 은(는) ｢개인정보 보호법｣ 제39조의11에 따라 국내대리인을 지정하였습니다.<em>
-
-
-- 국내대리인의 성명 : [대리인 성명_직접입력] (법인의 경우 법인명, 대표자의 성명)
-- 국내대리인의 주소 : [대리인 주소_직접입력] (법인의 경우 영업소 소재지)
-- 국내대리인의 전화번호 : [대리인 전화번호_직접입력]
-- 국내대리인의 전자우편 주소 : [대리인 전자우편_직접입력]</em></p><p id="73e8bf01-0a04-44c0-9633-71e21578cd98" class="">
-</p><p id="ccda7cef-7b89-4553-96fc-e7d3f902c216" class="">
-</p><p id="d7d852c4-ab57-4086-8051-4d9bf4932530" class="">
-<strong>제15조(개인정보의 열람청구를 접수·처리하는 부서)</strong></p><p id="1572b066-bdda-4951-b065-de8128ac4b3f" class=""><strong>정보주체는 ｢개인정보 보호법｣ 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다.&lt; 술렁술렁 &gt;은(는) 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.</strong></p><p id="d53a421a-75ba-4966-ae04-f147832c532d" class=""><em>
-</em>• ▶ 개인정보 열람청구 접수·처리 부서
-• 부서명 : 개발팀
-• 담당자 : 최다에
-• 연락처 : 010-2802-3287, soar_dy@naver.com,</p><p id="6c4e896d-9c94-414b-a06d-8b960746ac22" class="">
-</p><p id="8527ee6d-6fb6-4749-a62b-25557ba451c6" class=""><em>
-</em><strong>제16조(정보주체의 권익침해에 대한 구제방법)</strong></p><p id="b802731a-bf93-46d7-8e31-66548b33260e" class="">정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.1. 개인정보분쟁조정위원회 : (국번없이) 1833-6972 (www.kopico.go.kr)2. 개인정보침해신고센터 : (국번없이) 118 (privacy.kisa.or.kr)3. 대검찰청 : (국번없이) 1301 (www.spo.go.kr)4. 경찰청 : (국번없이) 182 (ecrm.cyber.go.kr)「개인정보보호법」제35조(개인정보의 열람), 제36조(개인정보의 정정·삭제), 제37조(개인정보의 처리정지 등)의 규정에 의한 요구에 대 하여 공공기관의 장이 행한 처분 또는 부작위로 인하여 권리 또는 이익의 침해를 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수 있습니다.※ 행정심판에 대해 자세한 사항은 중앙행정심판위원회(www.simpan.go.kr) 홈페이지를 참고하시기 바랍니다.</p><p id="c6d5b07a-af79-4e17-88a6-37955e5ad6df" class="">
-</p><p id="3c352b99-dbef-4c2d-8c59-9529b312c793" class="">
-<strong>제17조(개인정보 처리방침 변경)</strong><em>
-① 이 개인정보처리방침은 2023년 1월 1부터 적용됩니다.</em></p><p id="9c09732e-faa9-403b-96fc-529684abe733" class="">
-</p></div></article></body></html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>술렁술렁 개인정보처리방침</title>
+        <style>
+            /* cspell:disable-file */
+            /* webkit printing magic: print all background colors */
+            html {
+                -webkit-print-color-adjust: exact;
+            }
+            * {
+                box-sizing: border-box;
+                -webkit-print-color-adjust: exact;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            @media only screen {
+                body {
+                    margin: 2em auto;
+                    max-width: 900px;
+                    color: rgb(55, 53, 47);
+                }
+            }
+
+            body {
+                line-height: 1.5;
+                white-space: pre-wrap;
+            }
+
+            a,
+            a.visited {
+                color: inherit;
+                text-decoration: underline;
+            }
+
+            .pdf-relative-link-path {
+                font-size: 80%;
+                color: #444;
+            }
+
+            h1,
+            h2,
+            h3 {
+                letter-spacing: -0.01em;
+                line-height: 1.2;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-top: 0;
+                margin-bottom: 0.75em;
+            }
+
+            h1 {
+                font-size: 1.875rem;
+                margin-top: 1.875rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+                margin-top: 1.25rem;
+            }
+
+            .source {
+                border: 1px solid #ddd;
+                border-radius: 3px;
+                padding: 1.5em;
+                word-break: break-all;
+            }
+
+            .callout {
+                border-radius: 3px;
+                padding: 1rem;
+            }
+
+            figure {
+                margin: 1.25em 0;
+                page-break-inside: avoid;
+            }
+
+            figcaption {
+                opacity: 0.5;
+                font-size: 85%;
+                margin-top: 0.5em;
+            }
+
+            mark {
+                background-color: transparent;
+            }
+
+            .indented {
+                padding-left: 1.5em;
+            }
+
+            hr {
+                background: transparent;
+                display: block;
+                width: 100%;
+                height: 1px;
+                visibility: visible;
+                border: none;
+                border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            @media only print {
+                img {
+                    max-height: 100vh;
+                    object-fit: contain;
+                }
+            }
+
+            @page {
+                margin: 1in;
+            }
+
+            .collection-content {
+                font-size: 0.875rem;
+            }
+
+            .column-list {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .column {
+                padding: 0 1em;
+            }
+
+            .column:first-child {
+                padding-left: 0;
+            }
+
+            .column:last-child {
+                padding-right: 0;
+            }
+
+            .table_of_contents-item {
+                display: block;
+                font-size: 0.875rem;
+                line-height: 1.3;
+                padding: 0.125rem;
+            }
+
+            .table_of_contents-indent-1 {
+                margin-left: 1.5rem;
+            }
+
+            .table_of_contents-indent-2 {
+                margin-left: 3rem;
+            }
+
+            .table_of_contents-indent-3 {
+                margin-left: 4.5rem;
+            }
+
+            .table_of_contents-link {
+                text-decoration: none;
+                opacity: 0.7;
+                border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid rgba(55, 53, 47, 0.09);
+                border-collapse: collapse;
+            }
+
+            table {
+                border-left: none;
+                border-right: none;
+            }
+
+            th,
+            td {
+                font-weight: normal;
+                padding: 0.25em 0.5em;
+                line-height: 1.5;
+                min-height: 1.5em;
+                text-align: left;
+            }
+
+            th {
+                color: rgba(55, 53, 47, 0.6);
+            }
+
+            ol,
+            ul {
+                margin: 0;
+                margin-block-start: 0.6em;
+                margin-block-end: 0.6em;
+            }
+
+            li > ol:first-child,
+            li > ul:first-child {
+                margin-block-start: 0.6em;
+            }
+
+            ul > li {
+                list-style: disc;
+            }
+
+            ul.to-do-list {
+                padding-inline-start: 0;
+            }
+
+            ul.to-do-list > li {
+                list-style: none;
+            }
+
+            .to-do-children-checked {
+                text-decoration: line-through;
+                opacity: 0.375;
+            }
+
+            ul.toggle > li {
+                list-style: none;
+            }
+
+            ul {
+                padding-inline-start: 1.7em;
+            }
+
+            ul > li {
+                padding-left: 0.1em;
+            }
+
+            ol {
+                padding-inline-start: 1.6em;
+            }
+
+            ol > li {
+                padding-left: 0.2em;
+            }
+
+            .mono ol {
+                padding-inline-start: 2em;
+            }
+
+            .mono ol > li {
+                text-indent: -0.4em;
+            }
+
+            .toggle {
+                padding-inline-start: 0em;
+                list-style-type: none;
+            }
+
+            /* Indent toggle children */
+            .toggle > li > details {
+                padding-left: 1.7em;
+            }
+
+            .toggle > li > details > summary {
+                margin-left: -1.1em;
+            }
+
+            .selected-value {
+                display: inline-block;
+                padding: 0 0.5em;
+                background: rgba(206, 205, 202, 0.5);
+                border-radius: 3px;
+                margin-right: 0.5em;
+                margin-top: 0.3em;
+                margin-bottom: 0.3em;
+                white-space: nowrap;
+            }
+
+            .collection-title {
+                display: inline-block;
+                margin-right: 1em;
+            }
+
+            .page-description {
+                margin-bottom: 2em;
+            }
+
+            .simple-table {
+                margin-top: 1em;
+                font-size: 0.875rem;
+                empty-cells: show;
+            }
+            .simple-table td {
+                height: 29px;
+                min-width: 120px;
+            }
+
+            .simple-table th {
+                height: 29px;
+                min-width: 120px;
+            }
+
+            .simple-table-header-color {
+                background: rgb(247, 246, 243);
+                color: black;
+            }
+            .simple-table-header {
+                font-weight: 500;
+            }
+
+            time {
+                opacity: 0.5;
+            }
+
+            .icon {
+                display: inline-block;
+                max-width: 1.2em;
+                max-height: 1.2em;
+                text-decoration: none;
+                vertical-align: text-bottom;
+                margin-right: 0.5em;
+            }
+
+            img.icon {
+                border-radius: 3px;
+            }
+
+            .user-icon {
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 100%;
+                margin-right: 0.5rem;
+            }
+
+            .user-icon-inner {
+                font-size: 0.8em;
+            }
+
+            .text-icon {
+                border: 1px solid #000;
+                text-align: center;
+            }
+
+            .page-cover-image {
+                display: block;
+                object-fit: cover;
+                width: 100%;
+                max-height: 30vh;
+            }
+
+            .page-header-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .page-header-icon-with-cover {
+                margin-top: -0.72em;
+                margin-left: 0.07em;
+            }
+
+            .page-header-icon img {
+                border-radius: 3px;
+            }
+
+            .link-to-page {
+                margin: 1em 0;
+                padding: 0;
+                border: none;
+                font-weight: 500;
+            }
+
+            p > .user {
+                opacity: 0.5;
+            }
+
+            td > .user,
+            td > time {
+                white-space: nowrap;
+            }
+
+            input[type="checkbox"] {
+                transform: scale(1.5);
+                margin-right: 0.6em;
+                vertical-align: middle;
+            }
+
+            p {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+
+            .image {
+                border: none;
+                margin: 1.5em 0;
+                padding: 0;
+                border-radius: 0;
+                text-align: center;
+            }
+
+            .code,
+            code {
+                background: rgba(135, 131, 120, 0.15);
+                border-radius: 3px;
+                padding: 0.2em 0.4em;
+                border-radius: 3px;
+                font-size: 85%;
+                tab-size: 2;
+            }
+
+            code {
+                color: #eb5757;
+            }
+
+            .code {
+                padding: 1.5em 1em;
+            }
+
+            .code-wrap {
+                white-space: pre-wrap;
+                word-break: break-all;
+            }
+
+            .code > code {
+                background: none;
+                padding: 0;
+                font-size: 100%;
+                color: inherit;
+            }
+
+            blockquote {
+                font-size: 1.25em;
+                margin: 1em 0;
+                padding-left: 1em;
+                border-left: 3px solid rgb(55, 53, 47);
+            }
+
+            .bookmark {
+                text-decoration: none;
+                max-height: 8em;
+                padding: 0;
+                display: flex;
+                width: 100%;
+                align-items: stretch;
+            }
+
+            .bookmark-title {
+                font-size: 0.85em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 1.75em;
+                white-space: nowrap;
+            }
+
+            .bookmark-text {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .bookmark-info {
+                flex: 4 1 180px;
+                padding: 12px 14px 14px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .bookmark-image {
+                width: 33%;
+                flex: 1 1 180px;
+                display: block;
+                position: relative;
+                object-fit: cover;
+                border-radius: 1px;
+            }
+
+            .bookmark-description {
+                color: rgba(55, 53, 47, 0.6);
+                font-size: 0.75em;
+                overflow: hidden;
+                max-height: 4.5em;
+                word-break: break-word;
+            }
+
+            .bookmark-href {
+                font-size: 0.75em;
+                margin-top: 0.25em;
+            }
+
+            .sans {
+                font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+                    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            }
+            .code {
+                font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+            }
+            .serif {
+                font-family: Lyon-Text, Georgia, ui-serif, serif;
+            }
+            .mono {
+                font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+            }
+            .pdf .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+                    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji",
+                    "Noto Color Emoji", "Noto Sans CJK JP";
+            }
+            .pdf:lang(zh-CN) .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+                    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji",
+                    "Noto Color Emoji", "Noto Sans CJK SC";
+            }
+            .pdf:lang(zh-TW) .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+                    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji",
+                    "Noto Color Emoji", "Noto Sans CJK TC";
+            }
+            .pdf:lang(ko-KR) .sans {
+                font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+                    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Twemoji",
+                    "Noto Color Emoji", "Noto Sans CJK KR";
+            }
+            .pdf .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier,
+                    monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK JP";
+            }
+            .pdf:lang(zh-CN) .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier,
+                    monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK SC";
+            }
+            .pdf:lang(zh-TW) .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier,
+                    monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK TC";
+            }
+            .pdf:lang(ko-KR) .code {
+                font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier,
+                    monospace, "Twemoji", "Noto Color Emoji", "Noto Sans Mono CJK KR";
+            }
+            .pdf .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji",
+                    "Noto Serif CJK JP";
+            }
+            .pdf:lang(zh-CN) .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji",
+                    "Noto Serif CJK SC";
+            }
+            .pdf:lang(zh-TW) .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji",
+                    "Noto Serif CJK TC";
+            }
+            .pdf:lang(ko-KR) .serif {
+                font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, "Twemoji", "Noto Color Emoji",
+                    "Noto Serif CJK KR";
+            }
+            .pdf .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK JP";
+            }
+            .pdf:lang(zh-CN) .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK SC";
+            }
+            .pdf:lang(zh-TW) .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK TC";
+            }
+            .pdf:lang(ko-KR) .mono {
+                font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, "Twemoji", "Noto Color Emoji",
+                    "Noto Sans Mono CJK KR";
+            }
+            .highlight-default {
+                color: rgba(55, 53, 47, 1);
+            }
+            .highlight-gray {
+                color: rgba(120, 119, 116, 1);
+                fill: rgba(120, 119, 116, 1);
+            }
+            .highlight-brown {
+                color: rgba(159, 107, 83, 1);
+                fill: rgba(159, 107, 83, 1);
+            }
+            .highlight-orange {
+                color: rgba(217, 115, 13, 1);
+                fill: rgba(217, 115, 13, 1);
+            }
+            .highlight-yellow {
+                color: rgba(203, 145, 47, 1);
+                fill: rgba(203, 145, 47, 1);
+            }
+            .highlight-teal {
+                color: rgba(68, 131, 97, 1);
+                fill: rgba(68, 131, 97, 1);
+            }
+            .highlight-blue {
+                color: rgba(51, 126, 169, 1);
+                fill: rgba(51, 126, 169, 1);
+            }
+            .highlight-purple {
+                color: rgba(144, 101, 176, 1);
+                fill: rgba(144, 101, 176, 1);
+            }
+            .highlight-pink {
+                color: rgba(193, 76, 138, 1);
+                fill: rgba(193, 76, 138, 1);
+            }
+            .highlight-red {
+                color: rgba(212, 76, 71, 1);
+                fill: rgba(212, 76, 71, 1);
+            }
+            .highlight-gray_background {
+                background: rgba(241, 241, 239, 1);
+            }
+            .highlight-brown_background {
+                background: rgba(244, 238, 238, 1);
+            }
+            .highlight-orange_background {
+                background: rgba(251, 236, 221, 1);
+            }
+            .highlight-yellow_background {
+                background: rgba(251, 243, 219, 1);
+            }
+            .highlight-teal_background {
+                background: rgba(237, 243, 236, 1);
+            }
+            .highlight-blue_background {
+                background: rgba(231, 243, 248, 1);
+            }
+            .highlight-purple_background {
+                background: rgba(244, 240, 247, 0.8);
+            }
+            .highlight-pink_background {
+                background: rgba(249, 238, 243, 0.8);
+            }
+            .highlight-red_background {
+                background: rgba(253, 235, 236, 1);
+            }
+            .block-color-default {
+                color: inherit;
+                fill: inherit;
+            }
+            .block-color-gray {
+                color: rgba(120, 119, 116, 1);
+                fill: rgba(120, 119, 116, 1);
+            }
+            .block-color-brown {
+                color: rgba(159, 107, 83, 1);
+                fill: rgba(159, 107, 83, 1);
+            }
+            .block-color-orange {
+                color: rgba(217, 115, 13, 1);
+                fill: rgba(217, 115, 13, 1);
+            }
+            .block-color-yellow {
+                color: rgba(203, 145, 47, 1);
+                fill: rgba(203, 145, 47, 1);
+            }
+            .block-color-teal {
+                color: rgba(68, 131, 97, 1);
+                fill: rgba(68, 131, 97, 1);
+            }
+            .block-color-blue {
+                color: rgba(51, 126, 169, 1);
+                fill: rgba(51, 126, 169, 1);
+            }
+            .block-color-purple {
+                color: rgba(144, 101, 176, 1);
+                fill: rgba(144, 101, 176, 1);
+            }
+            .block-color-pink {
+                color: rgba(193, 76, 138, 1);
+                fill: rgba(193, 76, 138, 1);
+            }
+            .block-color-red {
+                color: rgba(212, 76, 71, 1);
+                fill: rgba(212, 76, 71, 1);
+            }
+            .block-color-gray_background {
+                background: rgba(241, 241, 239, 1);
+            }
+            .block-color-brown_background {
+                background: rgba(244, 238, 238, 1);
+            }
+            .block-color-orange_background {
+                background: rgba(251, 236, 221, 1);
+            }
+            .block-color-yellow_background {
+                background: rgba(251, 243, 219, 1);
+            }
+            .block-color-teal_background {
+                background: rgba(237, 243, 236, 1);
+            }
+            .block-color-blue_background {
+                background: rgba(231, 243, 248, 1);
+            }
+            .block-color-purple_background {
+                background: rgba(244, 240, 247, 0.8);
+            }
+            .block-color-pink_background {
+                background: rgba(249, 238, 243, 0.8);
+            }
+            .block-color-red_background {
+                background: rgba(253, 235, 236, 1);
+            }
+            .select-value-color-interactiveBlue {
+                background-color: rgba(35, 131, 226, 0.07);
+            }
+            .select-value-color-pink {
+                background-color: rgba(245, 224, 233, 1);
+            }
+            .select-value-color-purple {
+                background-color: rgba(232, 222, 238, 1);
+            }
+            .select-value-color-green {
+                background-color: rgba(219, 237, 219, 1);
+            }
+            .select-value-color-gray {
+                background-color: rgba(227, 226, 224, 1);
+            }
+            .select-value-color-translucentGray {
+                background-color: rgba(255, 255, 255, 0.0375);
+            }
+            .select-value-color-orange {
+                background-color: rgba(250, 222, 201, 1);
+            }
+            .select-value-color-brown {
+                background-color: rgba(238, 224, 218, 1);
+            }
+            .select-value-color-red {
+                background-color: rgba(255, 226, 221, 1);
+            }
+            .select-value-color-yellow {
+                background-color: rgba(253, 236, 200, 1);
+            }
+            .select-value-color-blue {
+                background-color: rgba(211, 229, 239, 1);
+            }
+            .select-value-color-pageGlass {
+                background-color: undefined;
+            }
+            .select-value-color-washGlass {
+                background-color: undefined;
+            }
+
+            .checkbox {
+                display: inline-flex;
+                vertical-align: text-bottom;
+                width: 16;
+                height: 16;
+                background-size: 16px;
+                margin-left: 2px;
+                margin-right: 5px;
+            }
+
+            .checkbox-on {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+            }
+
+            .checkbox-off {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+            }
+        </style>
+    </head>
+    <body>
+        <article id="6589a69f-ecf0-48eb-985c-7a94a646a3f2" class="page sans">
+            <header>
+                <h1 class="page-title">술렁술렁 개인정보처리방침</h1>
+                <p class="page-description"></p>
+            </header>
+            <div class="page-body">
+                <p id="1b6cb166-8bdf-48cd-aa72-0a9244d37ed6" class=""></p>
+                <p id="73aa1908-9313-4ef3-ad3c-46ae20446ee5" class="">
+                    <em
+                        >&lt; 술렁술렁 &gt;(&#x27;https://alcdiaryz.github.io/service/&#x27;이하
+                        &#x27;술렁술렁&#x27;)</em
+                    >은(는) 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고
+                    원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
+                </p>
+                <p id="837faa75-bd65-4742-bb2f-4a3b0ccd7ab4" class="">
+                    ○ 이 개인정보처리방침은 <em>2023</em>년 <em>1</em>월 <em>1</em>부터 적용됩니다.
+                </p>
+                <p id="a69cf3a8-4d29-4fe0-9638-49f4a44afdc6" class="">
+                    <strong>제1조(개인정보의 처리 목적)</strong
+                    ><em
+                        ><strong
+                            >&lt; 술렁술렁 &gt;(&#x27;https://alcdiaryz.github.io/service&#x27;이하
+                            &#x27;술렁술렁&#x27;)</strong
+                        ></em
+                    ><strong
+                        >은(는) 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의
+                        용도로는 이용되지 않으며 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의
+                        동의를 받는 등 필요한 조치를 이행할 예정입니다.
+                    </strong>
+                </p>
+                <p id="3d3e384e-18aa-4bfc-b977-584936a4c0b0" class="">1. 홈페이지 회원가입 및 관리</p>
+                <p id="f1c5444e-87c1-4964-87e4-73a4267d7314" class="">
+                    회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별·인증, 회원자격 유지·관리, 서비스 부정이용
+                    방지, 각종 고지·통지, 고충처리 목적으로 개인정보를 처리합니다.
+                </p>
+                <p id="bfbeb6b9-6344-453f-bc00-31d59aea521e" class="">2. 민원사무 처리</p>
+                <p id="6df7baa5-d9c4-4fab-8125-8c33adf2ade0" class="">
+                    민원인의 신원 확인, 민원사항 확인, 처리결과 통보 목적으로 개인정보를 처리합니다.
+                </p>
+                <p id="bcb717be-1bd2-4a6b-82a8-9b4b09c2aab9" class="">3. 재화 또는 서비스 제공</p>
+                <p id="7fcf3fe4-b49e-4786-8cf9-26d60506cb55" class="">
+                    서비스 제공, 콘텐츠 제공, 맞춤서비스 제공, 본인인증을 목적으로 개인정보를 처리합니다.
+                </p>
+                <p id="3bef9cf8-2112-4a5b-ae65-67375a1a5bfd" class="">4. 마케팅 및 광고에의 활용</p>
+                <p id="c176f267-720b-46a4-98b1-ffc2f2733a99" class="">
+                    신규 서비스(제품) 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공 및 참여기회 제공 ,
+                    인구통계학적 특성에 따른 서비스 제공 및 광고 게재 , 서비스의 유효성 확인 등을 목적으로 개인정보를
+                    처리합니다.
+                </p>
+                <p id="69d130bc-dd5e-4463-9f77-2b758e57924f" class="">5. 개인영상정보</p>
+                <p id="79848123-586e-4be2-89e1-a60bcceff9f9" class="">
+                    범죄의 예방 및 수사 등을 목적으로 개인정보를 처리합니다.
+                </p>
+                <p id="7985102d-7543-4d49-a225-6381b478ea94" class="">
+                    <strong>제2조(개인정보의 처리 및 보유 기간)</strong>
+                </p>
+                <p id="326f8db9-390a-4cda-bed9-de8390d30d70" class="">
+                    ① <em>&lt; 술렁술렁 &gt;</em>은(는) 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터
+                    개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.
+                </p>
+                <p id="31b6de8f-ec36-47d5-9e9b-9e6a895b5dce" class="">
+                    ② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.
+                </p>
+                <ul id="c10b633a-a34e-4789-b758-c46d38bd25b1" class="bulleted-list">
+                    <li style="list-style-type: disc">1.&lt;홈페이지 회원가입 및 관리&gt;</li>
+                </ul>
+                <ul id="978654a4-568c-4aae-af93-81e67b5aaeac" class="bulleted-list">
+                    <li style="list-style-type: disc">
+                        &lt;홈페이지 회원가입 및 관리&gt;와 관련한 개인정보는 수집.이용에 관한
+                        동의일로부터&lt;1년&gt;까지 위 이용목적을 위하여 보유.이용됩니다.
+                    </li>
+                </ul>
+                <ul id="9a2ea5a6-760a-4dd9-98df-7411439ae9ab" class="bulleted-list">
+                    <li style="list-style-type: disc">
+                        보유근거 : 「개인정보보호법」 제15조(개인정보의 수집·이용) 제1항
+                    </li>
+                </ul>
+                <ul id="ca205c43-9b91-4f4d-8612-22d900d9bd5e" class="bulleted-list">
+                    <li style="list-style-type: disc">관련법령 : 신용정보의 수집/처리 및 이용 등에 관한 기록 : 3년</li>
+                </ul>
+                <ul id="e257f944-b01c-481b-bd0e-c6975416ce9b" class="bulleted-list">
+                    <li style="list-style-type: disc">예외사유 : 서비스 종료 시</li>
+                </ul>
+                <p id="a4125945-3e4d-4124-a276-ff219c6f61eb" class="">
+                    <strong>제3조(처리하는 개인정보의 항목)</strong>
+                </p>
+                <p id="98ffcca5-0b65-40df-bb16-73b3b8d91a28" class="">
+                    ① <em>&lt; 술렁술렁 &gt;</em>은(는) 다음의 개인정보 항목을 처리하고 있습니다.
+                </p>
+                <ul id="326a3b22-38de-4ea4-80f0-49697b287e7e" class="bulleted-list">
+                    <li style="list-style-type: disc">1&lt; 홈페이지 회원가입 및 관리 &gt;</li>
+                </ul>
+                <ul id="5b1001f4-c8f9-4820-af4f-f15127266c4f" class="bulleted-list">
+                    <li style="list-style-type: disc">
+                        필수항목 : 로그인ID, 접속 IP 정보, 쿠키, 접속 로그, 서비스 이용 기록
+                    </li>
+                </ul>
+                <ul id="3aabc985-0536-456f-a49e-ca13a82cfbc5" class="bulleted-list">
+                    <li style="list-style-type: disc">선택항목 : 성별, 이메일</li>
+                </ul>
+                <p id="fba2028e-71b4-48c4-90f4-9c2385c0b7b5" class=""><em> </em></p>
+                <p id="73a0d493-84f2-492b-b591-d37034a3396f" class="">
+                    <strong>제4조(개인정보의 제3자 제공에 관한 사항)</strong>
+                </p>
+                <p id="f4e94249-f73d-4f25-ad11-284938abc48e" class="">
+                    ① <em>&lt; 술렁술렁 &gt;</em>은(는) 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만
+                    처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는
+                    경우에만 개인정보를 제3자에게 제공합니다.
+                </p>
+                <p id="bc6d2062-c023-44ee-ac72-28a6cefde5ac" class="">
+                    <em>② &lt; 술렁술렁 &gt;</em>은(는) 다음과 같이 개인정보를 제3자에게 제공하고 있습니다.
+                </p>
+                <ul id="a4e6ea8c-26f2-4cc2-8bbb-3bab7735fb69" class="bulleted-list">
+                    <li style="list-style-type: disc">개인정보를 제공받는 자 :</li>
+                </ul>
+                <ul id="f3272191-07dd-4705-bad4-6e438774597c" class="bulleted-list">
+                    <li style="list-style-type: disc">제공받는 자의 개인정보 이용목적 :</li>
+                </ul>
+                <ul id="c7f462ec-2b30-4d87-8f67-81e7c6902f25" class="bulleted-list">
+                    <li style="list-style-type: disc">제공받는 자의 보유.이용기간:</li>
+                </ul>
+                <p id="cf16d296-4831-4942-ab21-c7736cd3dce8" class=""></p>
+                <p id="f6a32d25-6d53-4eb4-bbe6-3a7a7fe6f4ec" class=""></p>
+                <p id="f29d8066-484e-48f8-8b05-bc9294f5d6dd" class=""></p>
+                <p id="5bb7f4d8-912b-4dab-87f8-03ef44bebe25" class="">
+                    <strong>제5조(개인정보처리의 위탁에 관한 사항)</strong><em> ① &lt; 술렁술렁 &gt;</em>은(는) 원활한
+                    개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다. • 1. &lt; &gt; •
+                    위탁받는 자 (수탁자) : • 위탁하는 업무의 내용 : • 위탁기간 :<em> ② &lt; 술렁술렁 &gt;</em>은(는)
+                    위탁계약 체결시 「개인정보 보호법」 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지,
+                    기술적․관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리․감독, 손해배상 등 책임에 관한 사항을 계약서
+                    등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.<em> ③ </em
+                    >위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록
+                    하겠습니다.
+                </p>
+                <p id="3cc324fd-ba6f-449a-8c98-102e39874510" class=""></p>
+                <p id="c765e1fa-0f75-4819-9278-476aa0887b0d" class=""></p>
+                <p id="5a460487-f09f-4a71-8e95-709dfb9b6788" class="">
+                    <strong>제6조(개인정보의 파기절차 및 파기방법)</strong><em> ① &lt; 술렁술렁 &gt; </em>은(는)
+                    개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당
+                    개인정보를 파기합니다.② 정보주체로부터 동의받은 개인정보 보유기간이 경과하거나 처리목적이
+                    달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를
+                    별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.1. 법령 근거 :2. 보존하는 개인정보
+                    항목 : 계좌정보, 거래날짜③ 개인정보 파기의 절차 및 방법은 다음과 같습니다.1. 파기절차&lt; 술렁술렁
+                    &gt; 은(는) 파기 사유가 발생한 개인정보를 선정하고, &lt; 술렁술렁 &gt; 의 개인정보 보호책임자의
+                    승인을 받아 개인정보를 파기합니다. 2. 파기방법 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을
+                    통하여 파기합니다.전자적 파일 형태의 정보는 기록을 재생할 수 없는 기술적 방법을 사용합니다
+                </p>
+                <p id="eef65aee-7064-440e-b336-562781f12bd5" class=""></p>
+                <p id="e2647089-0890-4d0b-8ced-63bb2188bf13" class=""></p>
+                <p id="8694c298-ede8-430d-9a0e-1c760c8e4d3e" class=""></p>
+                <p id="c17dcd8a-ac36-44da-b1b3-161946421db7" class="">
+                    <strong>제7조(정보주체와 법정대리인의 권리·의무 및 그 행사방법에 관한 사항)</strong> ① 정보주체는
+                    술렁술렁에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다. ②
+                    제1항에 따른 권리 행사는술렁술렁에 대해 「개인정보 보호법」 시행령 제41조제1항에 따라 서면,
+                    전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 술렁술렁은(는) 이에 대해 지체 없이
+                    조치하겠습니다. ③ 제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을
+                    통하여 하실 수 있습니다.이 경우 “개인정보 처리 방법에 관한 고시(제2020-7호)” 별지 제11호 서식에 따른
+                    위임장을 제출하셔야 합니다. ④ 개인정보 열람 및 처리정지 요구는 「개인정보 보호법」 제35조 제4항,
+                    제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다. ⑤ 개인정보의 정정 및 삭제 요구는 다른
+                    법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다. ⑥
+                    술렁술렁은(는) 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를
+                    한 자가 본인이거나 정당한 대리인인지를 확인합니다.
+                </p>
+                <p id="f3026b9c-3ae8-4320-bfe1-d8b4b58bec60" class=""></p>
+                <p id="4d275801-9395-4d32-baca-6ad9f6fd17fd" class=""></p>
+                <p id="a7de7284-1a0e-42e6-80a7-adce55de068d" class="">
+                    <strong>제8조(개인정보의 안전성 확보조치에 관한 사항) </strong
+                    ><em><strong>&lt; 술렁술렁 &gt;</strong></em
+                    ><strong>은(는) 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</strong>
+                    1. 개인정보 취급 직원의 최소화 및 교육 개인정보를 취급하는 직원을 지정하고 담당자에 한정시켜 최소화
+                    하여 개인정보를 관리하는 대책을 시행하고 있습니다.
+                </p>
+                <p id="7dac4c7c-6949-4343-bcc1-515b1d6a41d8" class=""></p>
+                <p id="82497ed0-66cf-449b-b0ea-a03892ae5d55" class=""></p>
+                <p id="86b07610-7599-4f34-bb69-b837906dc58b" class="">
+                    <strong>제9조(개인정보를 자동으로 수집하는 장치의 설치·운영 및 그 거부에 관한 사항)</strong>
+                    술렁술렁 은(는) 정보주체의 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용하지 않습니다.
+                    <em> </em><strong>제10조(행태정보의 수집·이용·제공 및 거부 등에 관한 사항)</strong> 행태정보의
+                    수집·이용·제공 및 거부등에 관한 사항 &lt;개인정보처리자명&gt;은(는) 온라인 맞춤형 광고 등을 위한
+                    행태정보를 수집·이용·제공하지 않습니다.
+                </p>
+                <p id="8b872eec-6a45-4baa-8e4d-a820db3e6f6f" class=""></p>
+                <p id="163e6e01-9885-4d7a-96d1-37a521efa5ca" class=""></p>
+                <p id="1cef2627-1e5a-44b7-bcd8-2356a34893d1" class="">
+                    <strong>제11조(추가적인 이용·제공 판단기준)</strong>
+                </p>
+                <p id="c3c90e0b-fa9f-4469-8ee5-6faf2ee50a6a" class="">
+                    <em>&lt; 술렁술렁 &gt;</em> 은(는) ｢개인정보 보호법｣ 제15조제3항 및 제17조제4항에 따라 ｢개인정보
+                    보호법 시행령｣ 제14조의2에 따른 사항을 고려하여 정보주체의 동의 없이 개인정보를 추가적으로
+                    이용·제공할 수 있습니다. 이에 따라 &lt; 술렁술렁 &gt; 가(이) 정보주체의 동의 없이 추가적인
+                    이용·제공을 하기 위해서 다음과 같은 사항을 고려하였습니다.▶ 개인정보를 추가적으로 이용·제공하려는
+                    목적이 당초 수집 목적과 관련성이 있는지 여부 ▶ 개인정보를 수집한 정황 또는 처리 관행에 비추어 볼 때
+                    추가적인 이용·제공에 대한 예측 가능성이 있는지 여부 ▶ 개인정보의 추가적인 이용·제공이 정보주체의
+                    이익을 부당하게 침해하는지 여부 ▶ 가명처리 또는 암호화 등 안전성 확보에 필요한 조치를 하였는지
+                    여부<em>
+                        ※ 추가적인 이용·제공 시 고려사항에 대한 판단기준은 사업자/단체 스스로 자율적으로 판단하여
+                        작성·공개함</em
+                    >
+                </p>
+                <p id="ef7acef9-5a19-4e3b-93f7-e9ef5a65fead" class=""></p>
+                <p id="49751714-eeb1-45be-9bd4-874ba208d663" class=""></p>
+                <p id="42505ef4-4a61-4a97-a67a-f317fde020f5" class=""></p>
+                <p id="fae9eb56-4afa-4741-8125-82846639a4b4" class=""></p>
+                <p id="9e0cb362-5b35-4cdd-82fb-7398efa1b35d" class="">
+                    <strong>제12조(가명정보를 처리하는 경우 가명정보 처리에 관한 사항)</strong>
+                </p>
+                <p id="7320bf66-77fa-4135-b762-f8bca77da943" class="">
+                    <em>&lt; 술렁술렁 &gt; </em>은(는) 다음과 같은 목적으로 가명정보를 처리하고 있습니다.<em> </em>▶
+                    가명정보의 처리 목적 - 직접작성 가능합니다. ▶ 가명정보의 처리 및 보유기간 - 직접작성 가능합니다. ▶
+                    가명정보의 제3자 제공에 관한 사항(해당되는 경우에만 작성) - 직접작성 가능합니다. ▶ 가명정보 처리의
+                    위탁에 관한 사항(해당되는 경우에만 작성) - 직접작성 가능합니다. ▶ 가명처리하는 개인정보의 항목 -
+                    직접작성 가능합니다. ▶ 법 제28조의4(가명정보에 대한 안전조치 의무 등)에 따른 가명정보의 안전성
+                    확보조치에 관한 사항 - 직접작성 가능합니다.
+                </p>
+                <p id="c7168186-894e-4430-832b-98e30e8c582b" class=""></p>
+                <p id="60959aa0-8d8a-4c09-809f-cd404bf716f3" class=""></p>
+                <p id="d18f0d40-14aa-40bf-90f4-fb1f4684737c" class="">
+                    <strong>제13조 (개인정보 보호책임자에 관한 사항)</strong><em> </em>① 술렁술렁 은(는) 개인정보 처리에
+                    관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여
+                    아래와 같이 개인정보 보호책임자를 지정하고 있습니다. ▶ 개인정보 보호책임자 • 성명 :최다예 • 직책 :PM
+                    • 직급 :팀원 • 연락처 :010-2802-3287, soar_dy@naver.com, ※ 개인정보 보호 담당부서로 연결됩니다.<em>
+                        ② 정보주체께서는 술렁술렁 의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련
+                        문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수
+                        있습니다. 술렁술렁 은(는) 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.</em
+                    >
+                </p>
+                <p id="2f3fd0f2-fe66-49e2-9842-91dd71c17acc" class=""></p>
+                <p id="9bccc0a4-fbcd-4469-b67c-a7ac1ce78113" class=""></p>
+                <p id="7ee844c7-01f1-49bc-8995-2981b2da37e1" class=""></p>
+                <p id="44f36117-5ad7-4477-8d28-b93ca59ec584" class=""></p>
+                <p id="72f9442d-3c22-4390-a4a0-f2bcaf1e5ce2" class=""><strong>제14조(국내대리인의 지정)</strong></p>
+                <p id="750ad587-0c5f-439b-a9fb-814570c13fe1" class="">
+                    정보주체는 ｢개인정보 보호법｣ 제39조의11에 따라 지정된 &lt; 술렁술렁 &gt;의 국내대리인에게 개인정보
+                    관련 고충처리 등의 업무를 위하여 연락을 취할 수 있습니다. &lt; 술렁술렁 &gt;은(는) 정보주체의
+                    개인정보 관련 고충처리 등 개인정보 보호책임자의 업무 등을 신속하게 처리할 수 있도록 노력하겠습니다.▶
+                    &lt; 술렁술렁 &gt; 은(는) ｢개인정보 보호법｣ 제39조의11에 따라 국내대리인을 지정하였습니다.<em>
+                        - 국내대리인의 성명 : [대리인 성명_직접입력] (법인의 경우 법인명, 대표자의 성명) - 국내대리인의
+                        주소 : [대리인 주소_직접입력] (법인의 경우 영업소 소재지) - 국내대리인의 전화번호 : [대리인
+                        전화번호_직접입력] - 국내대리인의 전자우편 주소 : [대리인 전자우편_직접입력]</em
+                    >
+                </p>
+                <p id="73e8bf01-0a04-44c0-9633-71e21578cd98" class=""></p>
+                <p id="ccda7cef-7b89-4553-96fc-e7d3f902c216" class=""></p>
+                <p id="d7d852c4-ab57-4086-8051-4d9bf4932530" class="">
+                    <strong>제15조(개인정보의 열람청구를 접수·처리하는 부서)</strong>
+                </p>
+                <p id="1572b066-bdda-4951-b065-de8128ac4b3f" class="">
+                    <strong
+                        >정보주체는 ｢개인정보 보호법｣ 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수
+                        있습니다.&lt; 술렁술렁 &gt;은(는) 정보주체의 개인정보 열람청구가 신속하게 처리되도록
+                        노력하겠습니다.</strong
+                    >
+                </p>
+                <p id="d53a421a-75ba-4966-ae04-f147832c532d" class="">
+                    <em> </em>• ▶ 개인정보 열람청구 접수·처리 부서 • 부서명 : 개발팀 • 담당자 : 최다에 • 연락처 :
+                    010-2802-3287, soar_dy@naver.com,
+                </p>
+                <p id="6c4e896d-9c94-414b-a06d-8b960746ac22" class=""></p>
+                <p id="8527ee6d-6fb6-4749-a62b-25557ba451c6" class="">
+                    <em> </em><strong>제16조(정보주체의 권익침해에 대한 구제방법)</strong>
+                </p>
+                <p id="b802731a-bf93-46d7-8e31-66548b33260e" class="">
+                    정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원
+                    개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의
+                    신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.1. 개인정보분쟁조정위원회 : (국번없이)
+                    1833-6972 (www.kopico.go.kr)2. 개인정보침해신고센터 : (국번없이) 118 (privacy.kisa.or.kr)3. 대검찰청
+                    : (국번없이) 1301 (www.spo.go.kr)4. 경찰청 : (국번없이) 182
+                    (ecrm.cyber.go.kr)「개인정보보호법」제35조(개인정보의 열람), 제36조(개인정보의 정정·삭제),
+                    제37조(개인정보의 처리정지 등)의 규정에 의한 요구에 대 하여 공공기관의 장이 행한 처분 또는 부작위로
+                    인하여 권리 또는 이익의 침해를 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수
+                    있습니다.※ 행정심판에 대해 자세한 사항은 중앙행정심판위원회(www.simpan.go.kr) 홈페이지를 참고하시기
+                    바랍니다.
+                </p>
+                <p id="c6d5b07a-af79-4e17-88a6-37955e5ad6df" class=""></p>
+                <p id="3c352b99-dbef-4c2d-8c59-9529b312c793" class="">
+                    <strong>제17조(개인정보 처리방침 변경)</strong
+                    ><em> ① 이 개인정보처리방침은 2023년 1월 1부터 적용됩니다.</em>
+                </p>
+                <p id="9c09732e-faa9-403b-96fc-529684abe733" class=""></p>
+            </div>
+        </article>
+    </body>
+</html>
